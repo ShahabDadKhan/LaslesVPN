@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <app-bar />
     <v-main>
       <the-header />
     </v-main>
@@ -7,12 +8,14 @@
 </template>
 
 <script>
-import TheHeader from "./views/AppBar.vue";
+import AppBar from "./views/AppBar.vue";
+import TheHeader from "./views/TheHeader.vue";
 
 export default {
   name: "App",
 
   components: {
+    AppBar,
     TheHeader,
   },
 
@@ -22,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .v-app-bar {
   color: $primary;
 }

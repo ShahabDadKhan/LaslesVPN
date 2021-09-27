@@ -1,35 +1,39 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col class="text-center">
-        <h1>Choose Your Plan</h1>
-        <p>
-          Let's choose the package that is best for you and explore it happily
-          and cheerfully.
-        </p>
-      </v-col>
-    </v-row>
-    <v-row align="center" justify="center">
-      <v-col
-        class="d-flex flex-column justify-center"
-        v-for="plan in plans"
-        :key="plan.name"
-        sm="3"
-      >
-        <div class="d-flex flex-column justify-start">
-          <div class="d-flex flex-column align-center">
-            <v-img width="145px" src="../assets/Img/Premium.png"></v-img>
+  <v-container fluid style="background-color:#F6F6F6;">
+    <v-container>
+      <v-row>
+        <v-col
+          class="d-flex flex-column justify-center align-center text-center"
+        >
+          <h1 class="mt-16 mb-5">Choose Your Plan</h1>
+          <p class="mb-7" style="width:555px;">
+            Let's choose the package that is best for you and explore it happily
+            and cheerfully.
+          </p>
+        </v-col>
+      </v-row>
+      <v-row class="mb-16" align="center" justify="center">
+        <v-col
+          class="d-flex flex-column justify-center"
+          v-for="plan in plans"
+          :key="plan.name"
+          sm="3"
+        >
+          <div class="d-flex flex-column justify-start">
+            <div class="d-flex flex-column align-center">
+              <v-img width="145px" src="../assets/Img/Premium.png"></v-img>
+            </div>
+            <h3 class="my-5 text-center">{{ plan.name }} Plan</h3>
+            <ul class="d-flex flex-column justify-start">
+              <li class="my-2" v-for="detail in plan.details" :key="detail">
+                <v-icon color="btnGreen" class="mr-3">mdi-check</v-icon>
+                {{ detail }}
+              </li>
+            </ul>
           </div>
-          <h3 class="my-5 text-center">{{ plan.name }} Plan</h3>
-          <ul class="d-flex flex-column justify-start">
-            <li class="my-2" v-for="detail in plan.details" :key="detail">
-              <v-icon color="btnGreen" class="mr-3">mdi-check</v-icon>
-              {{ detail }}
-            </li>
-          </ul>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-container>
 </template>
 

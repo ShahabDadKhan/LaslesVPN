@@ -5,12 +5,14 @@
       <the-header />
       <second-header />
       <the-plane />
+      <global-network />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import AppBar from "./views/AppBar.vue";
+import GlobalNetwork from "./views/GlobalNetwork.vue";
 import SecondHeader from "./views/SecondHeader.vue";
 import TheHeader from "./views/TheHeader.vue";
 import ThePlane from "./views/ThePlane.vue";
@@ -23,6 +25,7 @@ export default {
     TheHeader,
     SecondHeader,
     ThePlane,
+    GlobalNetwork,
   },
 
   data: () => ({
